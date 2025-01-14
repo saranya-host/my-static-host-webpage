@@ -31,3 +31,15 @@ footer {
     border: 1px solid #f44336;
     background: #f44336;
 }
+/* Ambient lighting effect */
+.ambient-light {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.8) 100%);
+    mix-blend-mode: overlay;
+    z-index: 1;
+}
