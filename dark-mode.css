@@ -1,0 +1,33 @@
+/* dark-mode.css */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.nav-links ul li a {
+    color: #e0e0e0;
+}
+
+.text-box h1, .text-box p {
+    color: #ffffff;
+}
+
+.course-col {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+footer {
+    background: linear-gradient(to right, #333, #444);
+    color: #ffffff;
+}
+
+.hero-btn {
+    border: 1px solid #fff;
+    background: #333;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+}
