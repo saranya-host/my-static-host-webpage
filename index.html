@@ -12,37 +12,119 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7538975442603653"
-     crossorigin="anonymous"></script>
 <!-- Include Font Awesome for the icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <div id="loader">
             <h3>It takes some inches to load. Please Wait Patiently.😊</h3>
     <div class="spinner"></div>
 </div>
+<style>
+    /* Hamburger Icon */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+}
+
+/* Sidebar Navigation */
+.nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+/* When menu is open */
+.nav-container.active {
+    transform: translateX(0);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 10px;
+}
+
+</style>
 </head>
 <body>
     <div id="content" style="display: none;">
     <section class="header">
         <nav>
-           <div class="nav-links">
-              <ul>
-                  <li><a href="#HOME">HOME</a></li>
-                  <li><a href="#OUR COURSES">OUR COURSES</a></li>
-                  <li><a href="#CELEBRATIONS">CELEBRATIONS</a></li>
-                  <li><a href="#EXIBITION">EXIBITION</a></li>
-                  <li><a href="#STUDENT ORGANIZATIONS">STUDENT ORGANIZATIONS</a></li>
-                  <li><a href="#APPLICATION FORM">APPLICATION FORM</a></li>
-                  <li><a href="#MAP">MAP</a></li>
-                  <li><a href="#CONTACT">CONTACT</a></li>
-               </ul>
-            </div>  
-        </nav>
+          <!-- Hamburger Menu -->
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+
+<!-- Sidebar Navigation -->
+<div class="nav-container" id="navMenu">
+    <span class="close-btn" onclick="toggleMenu()">✖</span>
+    <ul class="nav-links">
+        <li><a href="#HOME" onclick="toggleMenu()">HOME</a></li>
+        <li><a href="#OUR COURSES" onclick="toggleMenu()">OUR COURSES</a></li>
+        <li><a href="#CELEBRATIONS" onclick="toggleMenu()">CELEBRATIONS</a></li>
+        <li><a href="#EXIBITION" onclick="toggleMenu()">EXHIBITION</a></li>
+        <li><a href="#STUDENT ORGANIZATIONS" onclick="toggleMenu()">STUDENT ORGANIZATIONS</a></li>
+        <li><a href="#APPLICATION FORM" onclick="toggleMenu()">APPLICATION FORM</a></li>
+        <li><a href="#MAP" onclick="toggleMenu()">MAP</a></li>
+        <li><a href="#CONTACT" onclick="toggleMenu()">CONTACT</a></li>
+    </ul>
+</div>
+</nav>
+        
 
 <div class="text-box">
-    <h1>MPL HR SEC School</h1>
-    <p>Explore our courses & activities</p>
-    <a href="" class="hero-btn">Visit us to know more</a>    
+    <h1>Municipal Higher Secondary School</h1>
+    <H2>Zamin Pallavaram</H2>  
 </div>
 
     </section>
@@ -166,7 +248,7 @@
     100% {
         transform: rotate(360deg);
     }
-}.   Modify this CSS
+}
     </style>
 </head>
 <body>
@@ -184,7 +266,7 @@
             There is a playground, a library with 1026 books, and 20 functional computers for teaching and learning purposes.</p>
 
         <div class="btn-container">
-            <a href="#" class="btn">Learn More</a>
+            <a href="learnmore.html" class="btn">Learn More</a>
         </div>
     </section>
 </body>
@@ -366,24 +448,24 @@
     </div>
 </section>
  
-<section id="APPLICATION FORM" style="padding: 50px; background-color: #f9f9f9;">
-    <main style="max-width: 800px; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); padding: 40px; background-color: #ffffff;">
-        <h1 style="text-align: center; color: navy; margin-bottom: 20px; font-size: 2rem;">ONLINE APPLICATION FORM</h1>
-        <form action="#" method="post" style="display: flex; flex-direction: column; gap: 15px;">
-            <label for="name" style="font-weight: bold;">Name:</label>
-            <input type="text" id="name" name="name" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;">
+<section id="APPLICATION FORM" style="padding: 50px 0; background-color: #f9f9f9;">
+    <main style="max-width: 800px; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 40px; background-color: #ffffff; animation: fadeIn 1s ease-in-out;">
+        <h1 style="text-align: center; color: #003366; margin-bottom: 20px; font-size: 2.5rem; font-family: 'Arial', sans-serif;">ONLINE APPLICATION FORM</h1>
+        <form id="applicationForm" action="#" method="post" style="display: flex; flex-direction: column; gap: 20px;">
+            <label for="name" style="font-weight: bold; color: #003366; font-size: 1.1rem;">Name:</label>
+            <input type="text" id="name" name="name" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1.1rem; transition: all 0.3s ease;">
+            
+            <label for="phone" style="font-weight: bold; color: #003366; font-size: 1.1rem;">Phone No:</label>
+            <input type="tel" id="phone" name="phone" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1.1rem; transition: all 0.3s ease;">
 
-            <label for="phone" style="font-weight: bold;">Phone No:</label>
-            <input type="tel" id="phone" name="phone" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;">
+            <label for="email" style="font-weight: bold; color: #003366; font-size: 1.1rem;">Email:</label>
+            <input type="email" id="email" name="email" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1.1rem; transition: all 0.3s ease;">
 
-            <label for="email" style="font-weight: bold;">Email:</label>
-            <input type="email" id="email" name="email" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;">
+            <label for="dob" style="font-weight: bold; color: #003366; font-size: 1.1rem;">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1.1rem; transition: all 0.3s ease;">
 
-            <label for="dob" style="font-weight: bold;">Date of Birth:</label>
-            <input type="date" id="dob" name="dob" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;">
-
-            <label for="grade" style="font-weight: bold;">Grade Applying For:</label>
-            <select id="grade" name="grade" required style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem;">
+            <label for="grade" style="font-weight: bold; color: #003366; font-size: 1.1rem;">Grade Applying For:</label>
+            <select id="grade" name="grade" required style="padding: 12px; border-radius: 8px; border: 1px solid #ccc; font-size: 1.1rem; transition: all 0.3s ease;">
                 <option value="6th Grade">6th Grade</option>
                 <option value="7th Grade">7th Grade</option>
                 <option value="8th Grade">8th Grade</option>
@@ -393,11 +475,115 @@
                 <option value="12th Grade">12th Grade</option>
             </select>
 
-            <input type="submit" value="Submit" style="padding: 12px; border-radius: 5px; border: none; background-color: navy; color: white; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s;">
+            <!-- Resize submit button -->
+            <input type="submit" value="Submit" id="submitButton" style="padding: 12px 40px; border-radius: 8px; border: none; background-color: #003366; color: white; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: background-color 0.3s ease, transform 0.3s ease;">
         </form>
     </main>
 </section>
 
+<!-- Success Message Modal -->
+<div id="successMessageModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(0, 0, 0, 0.7); padding: 30px; border-radius: 10px; color: #ffffff; text-align: center; max-width: 400px; backdrop-filter: blur(10px); opacity: 0; animation: fadeIn 0.5s forwards;">
+    <h2>✅ Form Submitted</h2>
+    <p>Your form has been submitted to our school. We'll reach out to you via email.</p>
+    <button onclick="closeSuccessMessage()" style="padding: 10px 20px; background-color: #003366; color: white; border: none; cursor: pointer; border-radius: 5px; transition: background-color 0.3s ease;">Close</button>
+</div>
+
+<!-- Add Animations and Hover Effects -->
+<style>
+    /* Fade-in animation for modal */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+
+    /* Fade-out animation for modal */
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+    }
+
+    main {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    input[type="text"], input[type="tel"], input[type="email"], input[type="date"], select {
+        transition: all 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0044cc;
+        transform: scale(1.05);
+    }
+
+    input:focus, select:focus {
+        border-color: #0044cc;
+        box-shadow: 0 0 8px rgba(0, 68, 204, 0.5);
+        outline: none;
+    }
+
+    #successMessageModal button:hover {
+        background-color: #0044cc;
+    }
+</style>
+
+<!-- JavaScript for Form Submission and Success Message -->
+<script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+        event.preventDefault();  // Prevent actual form submission
+
+        // Simulate successful form submission
+        setTimeout(function() {
+            const modal = document.getElementById("successMessageModal");
+            modal.style.display = "block";  // Show the modal
+            modal.style.animation = "fadeIn 0.5s forwards"; // Only apply fade-in effect to modal
+        }, 500);
+    });
+
+    // Close the success message modal with fade-out effect
+    function closeSuccessMessage() {
+        const modal = document.getElementById("successMessageModal");
+        modal.style.animation = "fadeOut 0.5s forwards"; // Apply fade-out effect only to the modal
+        setTimeout(function() {
+            modal.style.display = "none";
+        }, 500); // Wait for the animation to complete before hiding the modal
+    }
+</script>
+
+
+<!-- JavaScript for Form Submission and Success Message -->
+<script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+        event.preventDefault();  // Prevent actual form submission
+
+        // Simulate successful form submission
+        setTimeout(function() {
+            const modal = document.getElementById("successMessageModal");
+            modal.style.display = "block";
+            modal.style.animation = "fadeIn 0.5s ease-in-out"; // Add fade-in effect
+        }, 500);
+    });
+
+    // Close the success message modal with fade-out effect
+    function closeSuccessMessage() {
+        const modal = document.getElementById("successMessageModal");
+        modal.style.animation = "fadeOut 0.5s ease-in-out"; // Add fade-out effect
+        setTimeout(function() {
+            modal.style.display = "none";
+        }, 500); // Wait for the animation to complete before hiding the modal
+    }
+</script>
 
 
 <!------map------>
@@ -458,7 +644,7 @@
 
         <!-- School Name and Copyright Section -->
         <div style="border-top: 1px solid #E0FFFF; padding-top: 20px; font-size: 16px; color: #777;">
-            <p style="color: #E0FFFF;">&copy; 2024 <strong style="color: #E0FFFF;">My School</strong> - All Rights Reserved</p>
+            <p style="color: #E0FFFF;">&copy; 2025 <strong style="color: #E0FFFF;">My School</strong> - All Rights Reserved</p>
         </div>
     </section>
 </footer>
@@ -510,6 +696,11 @@
             behavior: 'smooth'
         });
     });
+    function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+    }
+</script>
+
 </script>
 </body>
 </html>
