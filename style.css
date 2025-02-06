@@ -5,17 +5,18 @@
 
 body{
     background-color: rgb(231, 219, 219);
-    font-family: Kanit;
+    font-family: Poppins;
+    font-weight: bold;
     h1{
-        font-family: Montserrat;
+        font-family: Raleway;
     }
     h3{
-        font-family: Montserrat;
+        font-family: Noto Sans;
     }
       
 }
 p{
-    font-family: Raleway;
+    font-family: Poppins;
 }
 .header{
     min-height: 100vh;
@@ -123,13 +124,16 @@ h1{
     font-size: 36px;
     font-weight: 600;
     color: white;
+    font-family: Poppins;
 }
-p{
+.about{
     color: black;
-    font-size: 17px;
+    font-size: 19px;
     font-weight: 300;
     line-height: 22px;
-    padding: 10px;
+    padding: 5px;
+    font-family: PT Sans;
+    font-weight: bold;
 }
 
 
@@ -159,12 +163,14 @@ h1{
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
+
 }
 
 h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    text-decoration: underline;
 }
 
 .course-col:hover{
@@ -272,6 +278,9 @@ footer {
 #OUR\ COURSES {
     padding: 40px 20px;
 }
+.titletext{
+    text-decoration: none;
+}
 #back-to-top {
     position: fixed;
     bottom: 30px;
@@ -309,6 +318,7 @@ h1 {
     color: navy;
     margin-bottom: 40px;
     font-size: 2.5rem;
+    text-decoration: underline;
 }
 
 .row {
@@ -319,7 +329,7 @@ h1 {
 }
 
 .course-col {
-    background: linear-gradient(to right, #6b11cb8e, #2574fcb0);
+    background: linear-gradient(to right, #ff512f, #dd2476);
     border: 2px solid linear-gradient(to right, #6b11cba2, #2574fc9c);
     border-radius: 15px;
     padding: 20px;
@@ -335,15 +345,17 @@ h1 {
 }
 
 .course-col h3 {
-    color: #FFD700;
+    color: #ffffff;
     font-size: 1.5rem;
     margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .course-col p {
     color: #555;
     font-size: 1rem;
     line-height: 1.6;
+    font-weight: bold;
 }
 #HOME {
     padding: 60px 20px;
@@ -453,3 +465,9 @@ input:focus, select:focus {
         transform: rotate(360deg);
     }
     }
+.modal{
+    color: black;
+}
+.modal_h3{
+    text-decoration: none;
+}
