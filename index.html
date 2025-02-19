@@ -31,17 +31,27 @@
     top: 20px;
     right: 20px;
     font-size: 30px;
-    background: none;
     border: none;
-    color: white;
+    color: #dd2476;
     cursor: pointer;
     z-index: 1001;
     transition: transform 0.3s ease-in-out;
+    background-color: transparent;
 }
 
 .hamburger:hover {
     transform: scale(1.1);
+    color:  #ff512f;
 }
+/* Ensure the color is applied to the hamburger bars */
+.hamburger-icon {
+        width: 30px;
+        height: 3px;
+        
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
 
 /* Sidebar Navigation */
 .nav-container {
@@ -453,11 +463,41 @@
         <img src="image10.jpeg" alt="Exhibition Project 3" style="height: 300px; width: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.2)';">
     </div>
 </section>
+<style>
+    /* Styling for the application form section */
+    #APPLICATION\ FORM main {
+        text-align: center; /* Centers the content */
+    }
+
+    /* Apply Now button styling */
+    .btn-apply-now {
+        display: inline-block;
+        margin-top: 20px; /* Adds space between the brief and button */
+        padding: 12px 20px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        background-color: #2575fc;
+        text-transform: uppercase;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hover effect for Apply Now button */
+    .btn-apply-now:hover {
+        background-color: #6a11cb;
+        transform: scale(1.05);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+</style>
  
 <section id="APPLICATION FORM" style="padding: 50px 0; background-color: #f9f9f9;">
     <main style="max-width: 800px; margin: 0 auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); padding: 40px; background-color: #ffffff; animation: fadeIn 1s ease-in-out;">
         <h1 style="text-align: center; color: #003366; margin-bottom: 20px; font-size: 2.5rem; font-family: 'Arial', sans-serif;">ONLINE APPLICATION FORM</h1>
-       <a href="http://mplschoolzp.infy.uk/application_form.php" class="btn">Apply Now</a>
+        <p>Our Online Admission Form provides a simple and convenient way to apply for admission to our school. Applicants can fill in their personal details, select the grade they are applying for, and submit additional comments if needed. The form ensures data accuracy with confirmation steps before submission. Apply today and take the first step toward joining our vibrant learning community!</p>
+       <a href="http://mplschoolzp.infy.uk/admission_form.html" class="btn-apply-now">Apply Now</a>
 
 
     </main>
