@@ -162,7 +162,7 @@
             color: #333;
         }
 
-       /* About Us Section Styling */
+      /* About Us Section Styling */
 #HOME {
     max-width: 900px;
     margin: 40px auto;
@@ -177,6 +177,7 @@
     font-size: 2.5rem;
     color: #2574fc;
     margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .about {
@@ -198,7 +199,7 @@
     font-size: 1.2rem;
     color: #333;
     background: rgba(37, 116, 252, 0.1);
-    padding: 12px;
+    padding: 12px 15px;
     margin: 10px 0;
     border-radius: 8px;
     display: flex;
@@ -208,16 +209,22 @@
 
 .highlights li:hover {
     background: rgba(37, 116, 252, 0.2);
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .highlights li::before {
     content: '✔';
     font-weight: bold;
     color: #2574fc;
-    margin-right: 10px;
+    margin-right: 12px;
     font-size: 1.5rem;
 }
+
+.highlights li strong {
+    font-weight: 600;
+    margin-left: 5px;
+}
+
 
         .btn-container {
             text-align: center;
