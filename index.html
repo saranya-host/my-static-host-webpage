@@ -76,6 +76,12 @@
     border-radius: 20px;
     opacity: 0;
     overflow: hidden;
+     z-index: 1000; /* Keep it high but below the button */
+}
+/* Ensure Button Stays on Top */
+.application-form button {
+    position: relative;
+    z-index: 1010; /* Higher than the nav */
 }
 
 /* When menu is open */
@@ -1033,93 +1039,47 @@ document.querySelector(".hamburger").addEventListener("click", updateNavTextColo
 
 
 
-<section id="STUDENT-ORGANIZATIONS" style="padding: 40px 20px; background-color: #f9f9f9;">
-    <h1 style="text-align: center; color: navy; font-size: 2rem; margin-bottom: 20px;">Student Organizations</h1>
-    
-    <p style="text-align: center; color: #444; max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">
-        Student organizations are an integral part of the school experience, providing students with opportunities to engage in various extracurricular activities, develop leadership skills, and foster a sense of community. These organizations, which include clubs such as the Road Safety Club and Eco Club and More. Allow students to pursue their interests and passions outside the classroom. These groups also help students build valuable skills such as teamwork, communication, and problem-solving, which are essential for their personal and professional growth.
-    </p>
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <img src="image6.jpeg" alt="Exhibition Project 1" style="height: 300px; width: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.2)';">
-        <img src="image12.jpeg" alt="Exhibition Project 2" style="height: 300px; width: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.2)';">
-        <img src="image10.jpeg" alt="Exhibition Project 3" style="height: 300px; width: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.2)';">
+<section id="STUDENT-ORGANIZATIONS">
+    <div class="organizations-container">
+        <h1>Student Organizations</h1>
+
+        <p>
+            Student organizations are an integral part of the school experience, providing students with opportunities to engage in various extracurricular activities, develop leadership skills, and foster a sense of community. These organizations, which include clubs such as the Road Safety Club and Eco Club and More, allow students to pursue their interests and passions outside the classroom. These groups also help students build valuable skills such as teamwork, communication, and problem-solving, which are essential for their personal and professional growth.
+        </p>
+
+        <div class="organization-gallery">
+            <img src="image6.jpeg" alt="Exhibition Project 1">
+            <img src="image12.jpeg" alt="Exhibition Project 2">
+            <img src="image10.jpeg" alt="Exhibition Project 3">
+        </div>
     </div>
 </section>
+
 <style type="text/css">
 /* Student Organizations Section */
-#STUDENT-ORGANIZATIONS {
-    padding: 40px 20px;
-    background-color: rgba(255, 255, 255, 0.2); /* Soft background for glassmorphism */
-    backdrop-filter: blur(12px);
-    border-radius: 15px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+.organizations-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 30px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1.2s ease-in-out;
 }
 
-/* Title */
-#STUDENT-ORGANIZATIONS h1 {
-    color: navy;
+/* Title Glow Effect (Same as Other Sections) */
+.organizations-container h1 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    color: #2574fc;
     font-weight: 600;
-    text-transform: uppercase;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
     animation: glowText 2s infinite alternate ease-in-out;
 }
 
-/* Paragraph */
-#STUDENT-ORGANIZATIONS p {
-    color: #444;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-/* Organization Grid */
-.organizations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Wider and more balanced columns */
-    gap: 30px; /* Consistent spacing between cards */
-    margin-top: 20px;
-    padding: 0 10px;
-}
-
-/* Individual Organization Cards */
-.organization-card {
-    background: rgba(255, 255, 255, 0.3);
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-/* Card Title */
-.organization-card h2 {
-    font-size: 1.6rem;
-    color: #2574fc;
-    margin-bottom: 12px;
-    font-weight: 500;
-}
-
-/* Card Description */
-.organization-card p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Hover Effect */
-.organization-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-/* Glow Effect for Title */
+/* Glow Animation */
 @keyframes glowText {
     from {
         text-shadow: 2px 2px 10px rgba(37, 116, 252, 0.4);
@@ -1129,47 +1089,67 @@ document.querySelector(".hamburger").addEventListener("click", updateNavTextColo
     }
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Description */
+.organizations-container p {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 20px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    #STUDENT-ORGANIZATIONS {
-        padding: 30px 15px;
-    }
+/* Gallery Section */
+.organization-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-    #STUDENT-ORGANIZATIONS h1 {
+.organization-gallery img {
+    height: 300px;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.organization-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .organizations-container h1 {
         font-size: 2rem;
     }
 
-    .organization-card {
-        padding: 20px;
+    .organization-gallery img {
+        height: 200px;
     }
 
-    .organizations-grid {
-        gap: 20px; /* Reduce spacing for smaller screens */
+    .organizations-container p {
+        font-size: 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    #STUDENT-ORGANIZATIONS h1 {
+    .organization-gallery {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .organization-gallery img {
+        width: 90%;
+        height: auto;
+    }
+
+    .organizations-container h1 {
         font-size: 1.8rem;
     }
 
-    .organization-card h2 {
-        font-size: 1.3rem;
-    }
-
-    .organization-card p {
+    .organizations-container p {
         font-size: 0.95rem;
     }
 }
@@ -1470,8 +1450,33 @@ document.querySelector(".hamburger").addEventListener("click", updateNavTextColo
         });
     });
     function toggleMenu() {
-        document.getElementById("navMenu").classList.toggle("active");
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('active');
+
+    // Ensure button clicks aren't blocked by the navbar
+    if (nav.classList.contains('active')) {
+        nav.style.zIndex = '1000'; // Keep navbar below button
+    } else {
+        nav.style.zIndex = '-1'; // Push navbar behind everything
     }
+}
+
+// Close the nav when clicking outside of it
+document.addEventListener('click', (event) => {
+    const nav = document.getElementById('navMenu');
+    const hamburger = document.querySelector('.hamburger');
+
+    if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
+        nav.classList.remove('active');
+        nav.style.zIndex = '-1'; // Keep it behind
+    }
+});
+
+// Ensure button stays active even after nav closes
+document.querySelector('button[type="submit"]').addEventListener('click', (event) => {
+    console.log('Button clicked!');
+    event.stopPropagation(); // Prevent interference from nav
+});
 </script>
 
 </script>
