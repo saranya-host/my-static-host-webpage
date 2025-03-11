@@ -428,40 +428,137 @@ document.querySelector(".hamburger").addEventListener("click", updateNavTextColo
     </style>
 </head>
 <body>
-    <section id="HOME">
-    <h1>About Us</h1>
+   <section id="ABOUT">
+    <div class="about-container">
+        <h1>About Us</h1>
+        <p class="about-text">
+            Established in <strong>1981</strong>, MPL HR SEC School, Zamin Pallavaram, is a 
+            <strong>co-educational institution</strong> managed by the local body. It is located in the 
+            <strong>St. Thomas Mount (Urban) block</strong> of <strong>Kancheepuram district, Tamil Nadu</strong>. 
+            The school offers education from <strong>Grade 6 to Grade 12</strong>, with <strong>Tamil</strong> as the 
+            medium of instruction. The academic session starts in <strong>April</strong>, and the school is 
+            <strong>easily accessible</strong> via an all-weather road.
+        </p>
 
-    <p class="about">
-        Established in <strong>1981</strong>, MPL HR SEC School, Zamin Pallavaram, is a 
-        <strong>co-educational institution</strong> managed by the local body. It is located in the 
-        <strong>St. Thomas Mount (Urban) block</strong> of <strong>Kancheepuram district, Tamil Nadu</strong>. 
-        The school offers education from <strong>Grade 6 to Grade 12</strong>, with <strong>Tamil</strong> as the 
-        medium of instruction. The academic session starts in <strong>April</strong>, and the school is 
-        <strong>easily accessible</strong> via an all-weather road.
-    </p>
+        <ul class="about-highlights">
+            <li>📍 Situated in an Urban Area</li>
+            <li>🏫 Government-owned building with 30+ classrooms</li>
+            <li>🚸 Secure boundary wall ensuring safety</li>
+            <li>⚡ Equipped with electric connections</li>
+            <li>🚻 Functional toilets for both boys and girls</li>
+            <li>⚽ A spacious playground for student activities</li>
+            <li>📚 Library with 1,026 books</li>
+            <li>💻 20 computers for digital education</li>
+        </ul>
 
-   <ul class="highlights">
-    <li>📍 <strong>Situated in an Urban Area</strong></li>
-    <li>🏫 <strong>Government-owned building</strong> with <strong>30+ well-maintained classrooms</strong></li>
-    <li>📝 <strong>Additional rooms</strong> for non-teaching activities</li>
-    <li>🧑‍🏫 <strong>Dedicated Headmaster/Teacher room</strong></li>
-    <li>🚸 <strong>Secure boundary wall</strong> ensuring safety</li>
-    <li>⚡ <strong>Equipped with electric connections</strong></li>
-    <li>🚻 <strong>Functional toilets</strong> for both boys and girls</li>
-    <li>⚽ <strong>A spacious playground</strong> for <strong>student activities</strong></li>
-    <li>📚 <strong>A well-stocked library</strong> with 1,026 books</li>
-    <li>💻 <strong>20 functional computers</strong> for <strong>digital education</strong></li>
-</ul>
-
-        <div class="btn-container">
-            <a href="learnmore.html" class="btn">Know More</a>
+        <div class="about-btn-container">
+            <a href="learnmore.html" class="about-btn">Know More</a>
         </div>
+    </div>
 </section>
+<style>
+    /* About Us Section */
+.about-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
 
-</body>
-</html>
+/* Title */
+.about-container h1 {
+    font-size: 2.5rem;
+    color: #2574fc;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Description */
+.about-text {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Highlights List */
+.about-highlights {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-highlights li {
+    font-size: 1.2rem;
+    color: #333;
+    background: rgba(37, 116, 252, 0.1);
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.about-highlights li:hover {
+    background: rgba(37, 116, 252, 0.2);
+    transform: scale(1.03);
+}
+
+.about-highlights li::before {
+    content: '✔';
+    font-weight: bold;
+    color: #2574fc;
+    margin-right: 12px;
+    font-size: 1.5rem;
+}
+
+/* Button */
+.about-btn-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.about-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: white;
+    color: #2575fc;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-btn:hover {
+    background-color: #2575fc;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
  
-</section>
+</style>
 
 
 <!-- Back to Top Button -->
@@ -470,54 +567,117 @@ document.querySelector(".hamburger").addEventListener("click", updateNavTextColo
 </a>
 <!------our courses------>
 
-<section id="OUR COURSES">
-    <h1>Courses We Offer</h1>
-
-    <div class="row">
-        <div class="course-col">
-            <h3>Tamil</h3>
-            <p style="color: white;">As per the GO 145 of school education department, Tamil shall be taught as a subject in Classes I to X
-                in all schools notified under the Tamil Nadu Learning Act, 2006 in a phased manner commencing from the academic
-                year 2015-16 from Class I.</p>
-        </div>
-
-        <div class="course-col">
-            <h3>English</h3>
-            <p style="color: white;">English Language is the in-depth study of written and verbal communication in English. It explores the building 
-                blocks of the language, covering aspects such as phonetics, semantics and pragmatics. If you're interested in the 
-                nuts and bolts of the language, this just might be the subject for you!</p>
-        </div>
-
-        <div class="course-col">
-            <h3>Maths</h3>
-            <p style="color: white;">Mathematics is one of the most important subjects. Mathematics is a subject of numbers, shapes, data, measurements
-                and also logical activities. It has a huge scope in every field of our life, such as medicine, engineering, finance,
-                natural science, economics, etc.</p>
-        </div>   
-    </div>
-    
-    <div class="row">
-        <div class="course-col">
-            <h3>Science</h3>
-            <p style="color: white;">Science is a universal subject that spans the branch of knowledge that examines the structure and behavior of the physical
-                and natural world through observation and experiment. Science education is most commonly broken down into the following three 
-                fields: Biology, chemistry, and physics.</p>
-        </div>
-
-        <div class="course-col">
-            <h3>Social</h3>
-            <p style="color: white;">A social science is any branch of academic study or science that deals with human behaviour in its social and cultural aspects.
-                Usually included within the social sciences are cultural (or social) anthropology, sociology, psychology, political science, and 
-                economics.</p>
-        </div>
-
-        <div class="course-col">
-            <h3>PT</h3>
-            <p style="color: white;">Physical education teachers motivate their students and help them to get physically active and healthy in every way possible. Here 
-                are some other duties of physical education teachers: planning tasks, events and other physical activity-related assignments for students.</p>
+<section id="COURSES">
+    <div class="courses-container">
+        <h1>Courses We Offer</h1>
+        <div class="courses-grid">
+            <div class="course-card">
+                <h2>📖 Tamil</h2>
+                <p><strong>Overview:</strong> Tamil language and literature, poetry, grammar, and prose analysis.</p>
+                <p>Strengthens communication skills and literary appreciation while preparing students for competitive exams.</p>
+            </div>
+            <div class="course-card">
+                <h2>📚 English</h2>
+                <p><strong>Overview:</strong> English grammar, literature, comprehension, and creative writing.</p>
+                <p>Enhances language fluency, analytical skills, and professional communication.</p>
+            </div>
+            <div class="course-card">
+                <h2>🔬 Physics</h2>
+                <p><strong>Overview:</strong> Classical & modern physics, mechanics, electricity, magnetism, and optics.</p>
+                <p>Develops problem-solving skills for engineering, research, and technology careers.</p>
+            </div>
+            <div class="course-card">
+                <h2>🧪 Chemistry</h2>
+                <p><strong>Overview:</strong> Organic, inorganic, and physical chemistry concepts with lab applications.</p>
+                <p>Prepares students for medical, pharmaceutical, and chemical engineering fields.</p>
+            </div>
+            <div class="course-card">
+                <h2>🦠 Biology</h2>
+                <p><strong>Overview:</strong> Human anatomy, genetics, botany, zoology, and microbiology.</p>
+                <p>Essential for careers in medicine, biotechnology, and environmental sciences.</p>
+            </div>
+            <div class="course-card">
+                <h2>📊 Mathematics</h2>
+                <p><strong>Overview:</strong> Algebra, calculus, geometry, statistics, and trigonometry.</p>
+                <p>Develops logical thinking and problem-solving skills crucial for engineering and data sciences.</p>
+            </div>
+            <div class="course-card">
+                <h2>💻 Computer Science</h2>
+                <p><strong>Overview:</strong> Programming, algorithms, database management, and networking.</p>
+                <p>Prepares students for careers in software development, IT, and cybersecurity.</p>
+            </div>
+            <div class="course-card">
+                <h2>🏦 Commerce</h2>
+                <p><strong>Overview:</strong> Business studies, financial accounting, and economics.</p>
+                <p>Ideal for students interested in finance, management, and entrepreneurship.</p>
+            </div>
+            <div class="course-card">
+                <h2>📈 Economics</h2>
+                <p><strong>Overview:</strong> Microeconomics, macroeconomics, and financial management.</p>
+                <p>Essential for careers in banking, stock markets, and business analytics.</p>
+            </div>
         </div>
     </div>
 </section>
+
+<style type="text/css">
+    /* Courses Section */
+.courses-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Title */
+.courses-container h1 {
+    font-size: 2.5rem;
+    color: #2574fc;
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Course Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Individual Course Cards */
+.course-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.course-card h2 {
+    font-size: 1.5rem;
+    color: #2574fc;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Hover Effect */
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+</style>
 
 <!------celebrations------>
 
