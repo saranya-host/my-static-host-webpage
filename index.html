@@ -24,67 +24,87 @@
             <h3>It takes some inches to load. Please Wait Patiently.😊</h3>
     <div class="spinner"></div>
 </div>
-<style>
-    /* Hamburger Icon */
+
+</head>
+<body>
+    <div id="content" style="display: none;">
+    <section class="header">
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Nav</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+       
+ /* Hamburger Menu */
 .hamburger {
     position: fixed;
     top: 20px;
-    right: 20px;
-    font-size: 30px;
+    right: 30px; /* Moved slightly to the right */
+    font-size: 36px; /* Made bigger */
     border: none;
     color: #dd2476;
     cursor: pointer;
     z-index: 1001;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     background-color: transparent;
 }
 
 .hamburger:hover {
-    transform: scale(1.1);
-    color:  #ff512f;
+    transform: scale(1.2); /* Slight zoom effect */
+    color: #ff512f;
 }
-/* Ensure the color is applied to the hamburger bars */
-.hamburger-icon {
-        width: 30px;
-        height: 3px;
-        
-        margin: 5px 0;
-        transition: all 0.3s ease;
-    }
 
-
-/* Sidebar Navigation */
+/* Sidebar Navigation - Acrylic Blur with Correct Positioning */
 .nav-container {
     position: fixed;
-    top: 0;
-    right: 0;
-    width: 250px;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in-out;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    right: 20px;
+    width: 300px; /* Slightly wider */
+    height: 90vh;
+    background: rgba(255, 255, 255, 0.15); /* Light acrylic effect */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transform: translateY(-50%) scale(0.95); /* Fix position */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, opacity 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
+    box-shadow: 0 10px 30px rgba(221, 36, 118, 0.3);
     padding-top: 60px;
     z-index: 1000;
+    border-radius: 20px;
+    opacity: 0;
+    overflow: hidden;
 }
 
 /* When menu is open */
 .nav-container.active {
-    transform: translateX(0);
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
 }
 
-/* Close Button */
-.close-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
+/* Dark Mode Acrylic Blur */
+.dark-mode .nav-container {
+    background: rgba(20, 20, 20, 0.3); /* Dark acrylic effect */
+    box-shadow: 0 10px 40px rgba(255, 81, 47, 0.3);
 }
 
-.close-btn:hover {
-    color: red;
+/* Ambient Glow Effect */
+@keyframes ambientGlow {
+    0% { box-shadow: 0 0 10px rgba(221, 36, 118, 0.4); }
+    50% { box-shadow: 0 0 20px rgba(255, 81, 47, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(221, 36, 118, 0.4); }
+}
+
+.nav-container {
+    animation: ambientGlow 3s infinite alternate ease-in-out;
+}
+
+
+.nav-container.active {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
 }
 
 /* Navigation Links */
@@ -96,46 +116,144 @@
 
 .nav-links li {
     padding: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
+/* Default Navigation Links */
 .nav-links li a {
-    color: white;
+    color: white; /* Default text color */
     text-decoration: none;
     font-size: 18px;
     display: block;
-    transition: all 0.3s ease;
+    transition: color 0.3s ease-in-out, padding-left 0.3s ease-in-out;
+}
+
+/* Adaptive Dark Mode */
+.dark-mode .nav-links li a {
+    color: white;
+}
+
+/* Adaptive Light Mode */
+.light-mode .nav-links li a {
+    color: black;
+}
+
+
+/* Smooth hover animations */
+.nav-links li:hover {
+   
+    transform: scale(1.05);
 }
 
 .nav-links li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    padding-left: 10px;
+    padding-left: 12px;
+    color: #ff512f;
 }
 
-</style>
-</head>
-<body>
-    <div id="content" style="display: none;">
-    <section class="header">
-        <nav>
-          <!-- Hamburger Menu -->
-<button class="hamburger" onclick="toggleMenu()">☰</button>
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
 
-<!-- Sidebar Navigation -->
-<div class="nav-container" id="navMenu">
-    <span class="close-btn" onclick="toggleMenu()">✖</span>
-    <ul class="nav-links">
-        <li><a href="#HOME" onclick="toggleMenu()">HOME</a></li>
-        <li><a href="#OUR COURSES" onclick="toggleMenu()">OUR COURSES</a></li>
-        <li><a href="#CELEBRATIONS" onclick="toggleMenu()">CELEBRATIONS</a></li>
-        <li><a href="#EXIBITION" onclick="toggleMenu()">EXHIBITION</a></li>
-        <li><a href="#STUDENT ORGANIZATIONS" onclick="toggleMenu()">STUDENT ORGANIZATIONS</a></li>
-        <li><a href="#APPLICATION FORM" onclick="toggleMenu()">APPLICATION FORM</a></li>
-        <li><a href="#MAP" onclick="toggleMenu()">MAP</a></li>
-        <li><a href="#CONTACT" onclick="toggleMenu()">CONTACT</a></li>
-    </ul>
-</div>
-</nav>
+.close-btn:hover {
+    color: red;
+}
+
+
+.nav-container {
+    animation: ambientGlow 3s infinite alternate ease-in-out;
+}
+
+
+   
+}
+
+
+/* Default Light Mode */
+.nav-container {
+    animation: ambientGlowLight 3s infinite alternate ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Apply Dark Mode Styles Dynamically */
+.dark-mode .nav-container {
+    animation: ambientGlowDark 3s infinite alternate ease-in-out;
+}
+
+
+
+    </style>
+    <script type="text/javascript">
+        function applyAmbientMode() {
+    const hour = new Date().getHours();
+    const body = document.body;
+
+    if (hour >= 18 || hour < 6) { // After 6 PM or before 6 AM
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+    }
+}
+
+// Run function on page load
+applyAmbientMode();
+
+// Optional: Update mode dynamically every minute
+setInterval(applyAmbientMode, 60000);
+
+function updateNavTextColor() {
+    const nav = document.querySelector(".nav-container");
+    const links = document.querySelectorAll(".nav-links li a");
+
+    // Get the actual background color of the navbar
+    let bgColor = window.getComputedStyle(nav).backgroundColor;
+    let brightness = getBrightness(bgColor);
+
+    // If navbar is white, make text black. Otherwise, keep it white.
+    links.forEach(link => {
+        link.style.color = brightness > 180 ? "black" : "white";
+    });
+}
+
+// Helper function to calculate brightness
+function getBrightness(color) {
+    let rgb = color.match(/\d+/g).map(Number);
+    return (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+}
+
+// Run function on page load and when opening the menu
+window.addEventListener("load", updateNavTextColor);
+window.addEventListener("scroll", updateNavTextColor);
+document.querySelector(".hamburger").addEventListener("click", updateNavTextColor);
+
+
+    </script>
+    <nav>
+        <!-- Hamburger Menu -->
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        
+        <!-- Sidebar Navigation -->
+        <div class="nav-container" id="navMenu">
+            <span class="close-btn" onclick="toggleMenu()">✖</span>
+            <ul class="nav-links">
+                <li><a href="#HOME" onclick="toggleMenu()">HOME</a></li>
+                <li><a href="#OUR COURSES" onclick="toggleMenu()">OUR COURSES</a></li>
+                <li><a href="#CELEBRATIONS" onclick="toggleMenu()">CELEBRATIONS</a></li>
+                <li><a href="#EXHIBITION" onclick="toggleMenu()">EXHIBITION</a></li>
+                <li><a href="#STUDENT ORGANIZATIONS" onclick="toggleMenu()">STUDENT ORGANIZATIONS</a></li>
+                <li><a href="#APPLICATION FORM" onclick="toggleMenu()">APPLICATION FORM</a></li>
+                <li><a href="#MAP" onclick="toggleMenu()">MAP</a></li>
+                <li><a href="#CONTACT" onclick="toggleMenu()">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
         
 
 <div class="text-box">
